@@ -6,23 +6,36 @@
   background-color: white;
   border-radius: 10px;
   margin-top: 50px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Header and Logout Button */
 header {
-  text-align: center;
+  display: flex;              /* Use flexbox for layout */
+  justify-content: center;    /* Center the title horizontally */
+  align-items: center;        /* Vertically align items */
   margin-bottom: 30px;
-  position: relative;
+  position: relative;         /* Needed for absolute positioning of Logout */
 }
 
 .logout {
-  position: absolute;
-  right: 0;
-  top: 0;
+  position: absolute;         /* Pin to top-right corner */
+  right: 20px;                /* Add space from the right edge */
+  top: 10px;                  /* Add space from the top edge */
   padding: 5px 10px;
   cursor: pointer;
+  background-color: #0077cc;  /* Button color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
+.logout:hover {
+  background-color: #005fa3;  /* Darker on hover */
+}
+
+/* Inputs for adding journals and login/signup */
 .add-journal input,
 input[type="email"],
 input[type="password"] {
@@ -33,6 +46,7 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
+/* Buttons */
 .add-journal button,
 button {
   padding: 10px 20px;
@@ -40,6 +54,7 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .add-journal button:hover,
@@ -47,6 +62,7 @@ button:hover {
   background-color: #005fa3;
 }
 
+/* Journal list styles */
 .journal-list ul {
   list-style: none;
   padding: 0;
@@ -59,6 +75,7 @@ button:hover {
   border-radius: 5px;
 }
 
+/* Links (like Sign Up/Login toggles) */
 .link {
   background: none;
   border: none;

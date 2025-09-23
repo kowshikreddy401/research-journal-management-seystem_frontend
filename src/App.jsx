@@ -9,7 +9,7 @@ function App() {
     { id: 2, title: "Quantum Computing", author: "Dr. Sohail" },
     { id: 3, title: "Blockchain Technology", author: "Dr. Vikas" },
     { id: 4, title: "Data Science Trends", author: "Dr. Tulesh" },
-    { id: 5, title: "Neural Networks", author: "Dr. vijay" },
+    { id: 5, title: "Neural Networks", author: "Dr. Vijay" },
   ]);
 
   const [title, setTitle] = useState('');
@@ -28,12 +28,32 @@ function App() {
   };
 
   const handleLogin = () => {
-    // just simulate login
-    if (email && password) setPage('home');
+    if (email && password) {
+      setPage('home');
+      // Clear fields after login
+      setEmail('');
+      setPassword('');
+    } else {
+      alert('Please enter email and password');
+    }
   };
 
   const handleSignup = () => {
-    if (email && password && password === confirmPassword) setPage('home');
+    if (!email || !password || !confirmPassword) {
+      alert('Please fill out all fields');
+      return;
+    }
+    if (password !== confirmPassword) {
+      alert('Passwords do not match');
+      return;
+    }
+
+    // Simulate signup success (no auto-login)
+    alert('Signup successful! Please log in.');
+    setEmail('');
+    setPassword('');
+    setConfirmPassword('');
+    setPage('login'); // ✅ Redirect to login page
   };
 
   if (page === 'login') {
