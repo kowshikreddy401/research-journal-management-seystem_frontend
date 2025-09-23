@@ -13,3 +13,4 @@ If you are developing a production application, we recommend using TypeScript wi
 "# research-journal-management-seystem_frontend" 
 "# Research-journal-management-system_frontend" 
 "# Research-journal-management-system_frontend" 
+"# Research-journal-management-system_front" 
